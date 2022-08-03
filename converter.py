@@ -7,13 +7,12 @@ video_url = "https://v16m-webapp.tiktokcdn-us.com/a6e3b7e6a064bc43da3a39ab93460e
 
 
 def converter(video_url):
-    video_mp4 = urllib.request.urlretrieve(video_url, "videos/test.mp4")
+    video_mp4 = urllib.request.urlretrieve(video_url, "test.mp4")
     video_path = video_mp4[0]
-    print(video_path)
     video = VideoFileClip(video_path)
-    video_to_gif = video.write_gif("gifs/test.gif")
-    gif_path = os.path.abspath(video_to_gif)
-    return f"This is the path to gif: {gif_path}"
+    # video_to_gif = video.write_gif("test.gif")
+    gif_path = os.path.abspath("test.gif")
+    return print(f"This is the path to gif: {gif_path}")
 
 
 converter(video_url)
